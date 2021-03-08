@@ -42,9 +42,11 @@ def login():
 
 #writes a row in the csv file for future login
 def create_account():
+    import random
+    print ("Here is an example of what your PIN should look like:",random.randint(111,999))
     with open(account_file, 'w') as file:
         writer = csv.writer(file)
-        writer.writerow([input('Enter your new Username: '), input('Enter your new PIN: ')])
+        writer.writerow([input('Enter your new Username: '), input("Enter your new PIN: ")])      
         print('Account succesfully created!')
 
 #what the user should see after a successful login screen
